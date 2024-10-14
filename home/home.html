@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RDR2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div> 
+                    <ul class="menu">
+                        <li class="logo"><img src="../home/img/icon.png" alt="Logo" class="logo-img"></li>
+                <li><a href="../login/login.html">Cerrar Sesión</a></li>
+                <li><a href="../home/home.html" class="active">Home</a></li>
+                <li><a href="../galeria/galeria.html">Galería</a></li>
+                <li><a href="../personajes/personajes.html">Personajes</a></li>
+                <li><a href="../caballos/caballos.html">Caballos</a></li>
+                <li><a href="../desafios/desafios.html">Desafíos</a></li>
+                <li><a href="../sorteo/sorteo.html">Sorteo</a></li>
+            </ul>
+            <div class="menu-close">&times;</div>
+        </nav>
+    </header>
+
+    <main>
+
+            <h1>Red Dead Redemption 2</h1>
+            <div class="carrusel">
+                <button class="flecha circulo-izquierda" onclick="prevSlide()">&#10094;</button>
+                <div class="imagenes">
+                    <div class="img">
+                        <img src="img/img1.jpg" alt="Imagen 1" loading="lazy">
+                    </div>
+                    <div class="img">
+                        <img src="img/img2.jpg" alt="Imagen 2" loading="lazy">
+                    </div>
+                    <div class="img">
+                        <img src="img/img3.jpg" alt="Imagen 3" loading="lazy">
+                    </div>
+                </div>
+                <button class="flecha circulo-derecha" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <section id="presentation">
+            <div class="card">
+                <h2>¿Qué es Red Dead Redemption 2?</h2>
+                <p><strong>"Red Dead Redemption 2"</strong> es un juego de acción y aventura de mundo abierto creado por Rockstar Games. Es la tercera entrega de la serie Red Dead y una precuela de "Red Dead Redemption" de 2010. La historia se desarrolla en una versión ficticia de Estados Unidos en 1899, donde el jugador sigue a <strong>Arthur Morgan</strong>, un forajido de la pandilla <strong>Van der Linde</strong>, mientras enfrenta el declive del Salvaje Oeste, luchando contra fuerzas gubernamentales, pandillas rivales y otros enemigos.</p>
+            <p>El juego permite explorar libremente el mundo abierto, participar en tiroteos, robos, caza y montar a caballo. Las decisiones del jugador afectan la calificación de honor del personaje y la respuesta de las autoridades a los crímenes cometidos.</p>
+            <img class="img5" src="../home/img/img5.jpg" alt="Imagen5">
+            
+        </div>
+            
+            <div class="noticias-container">
+                
+            
+                <div class="noticia">
+                    <h3><strong>Dead Redemption 2 sorprende a los fans con un detalle que pocos conocían</strong> </h3>
+                    <p>Cinco años después de su debut, el mundo abierto de Rockstar sigue ofreciendo curiosidades que demuestran toda la atención puesta por los desarrolladores..</p>
+                    <img src="../home/noticias/img/img1.jpg" alt="Imagen1">
+                    <a href="../home/noticias/noticias1.html" class="btn btn-primary">Leer más</a>
+                </div>
+            
+                <div class="noticia">
+                    <h3 class="noticia"><strong>Intenté ser mi propio jefe, pero resulté ser mi propio empleado.</strong></h3>
+                    <p>“Familia, brindo porque este año sí pude lograr ser mi propio jefe. Lo malo es que me debo tres quincenas”.</p>
+                    <img src="../home/noticias/img/img2.jpg" alt="Imagen de nuevas expansiones">
+                    <a href="../home/noticias/noticias2.html" class="btn btn-primary">Leer más</a>
+                </div>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <script src="../home/js/home.js"></script>
+</body>
+</html>

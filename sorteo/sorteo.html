@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo RDR2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">&#9776;</div> 
+            <ul class="menu">
+                <li class="logo"><img src="../home/img/icon.png" alt="Logo" class="logo-img"></li>
+                <li><a href="../login/login.html">Cerrar Sesión</a></li>
+                <li><a href="../home/home.html">Inicio</a></li>
+                <li><a href="../galeria/galeria.html">Galería</a></li>
+                <li><a href="../personajes/personajes.html">Personajes</a></li>
+                <li><a href="../caballos/caballos.html">Caballos</a></li>
+                <li><a href="../desafios/desafios.html">Desafíos</a></li>
+                <li><a href="../sorteo/sorteo.html" class="active">Sorteo</a></li>
+            </ul>
+            <div class="menu-close">&times;</div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sorteo">
+            <h1 class="h1">Participa en el Sorteo de un Paquete Misterioso de RDR2</h1>
+            <form id="sorteo-form">
+                <div class="form-groupA">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="form-groupA">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                </div>
+                <div class="form-groupA">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-control" required>
+                </div>
+                <div class="form-groupA">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" class="form-control" required>
+                </div>
+                <div class="form-groupA">
+                    <label for="telefono">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                </div>
+                <div class="form-groupA">
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais" class="form-control" required>
+                        <option value="">Seleccione un país</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="México">México</option>
+                        <option value="España">España</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <script src="../sorteo/js/sorteo.js"></script>
+
+
+</body>
+</html>

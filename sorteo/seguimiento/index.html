@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por Participar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body>
+    <div class="thank-you-container">
+        <h1>¡Gracias por participar!</h1>
+        <p>Tu participación en el sorteo ha sido registrada exitosamente.</p>
+        <p>Tu número de seguimiento es: <strong id="ticket-number"></strong></p>
+        <a href="../sorteo.html" class="btn btn-primary btn-back">Volver al Sorteo</a>
+    </div>
+
+    <script>
+        // Obtener el número de ticket de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const ticketNumber = urlParams.get('ticket');
+
+        // Mostrar el número de ticket en la página
+        document.getElementById('ticket-number').textContent = ticketNumber;
+    </script>
+<script src="../seguimiento/js/seguimiento.js"></script>
+
+</body>
+</html>

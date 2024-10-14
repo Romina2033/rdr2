@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div id="register" class="col-md-6">
+            <button id="themeToggle" onclick="toggleTheme()" class="btn btn-light">🌓</button>
+            <h1 class="text-center"><strong>Crear Cuenta </strong></h1>
+            <form id="registerForm"   class="mb-3">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="genero">Género:</label>
+                    <select id="genero" name="genero" class="form-control" required onchange="toggleGeneroOtro()">
+                        <option value="">Seleccione un género</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="no binarie">No Binarie</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <input type="text" id="generoOtro" name="generoOtro" class="form-control mt-2" placeholder="Especifica si elegiste 'Otro' (opcional)" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="pronombres">Pronombres:</label>
+                    <select id="pronombres" name="pronombres" class="form-control" required>
+                        <option value="">Seleccione pronombres</option>
+                        <option value="ella">Ella</option>
+                        <option value="el">Él</option>
+                        <option value="elle">Elle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" name="password" required autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required autocomplete="new-password">
+                </div>
+                <button type="submit" onsubmit="handleRegister(event)" class="btn btn-primary btn-block">Registrar</button>
+                <p id="errorMessage"></p>
+            </form>
+            <p class="text-center">
+                ¿Ya tienes una cuenta? <a href="../login.html">Iniciar sesión</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="../nuevo/js/register.js"></script>
+</body>
+</html>
