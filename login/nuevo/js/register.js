@@ -58,7 +58,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
 
     // Registro exitoso
     alert('Cuenta creada exitosamente. Ahora puedes iniciar sesión.');
-    window.location.href = '../login.html'; // Redirigir al login después de registrarse
+    window.location.href = '../../../index.html'; // Redirigir al login después de registrarse
 });
 
 
