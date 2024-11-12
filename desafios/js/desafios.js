@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const anuncio = document.getElementById('anuncio');
 
 
-    // Función para mostrar el popup
+  /*  // Función para mostrar el popup
     function mostrarPopup() {
         anuncio.classList.add('mostrar');
-    }
-
+    }*/
     // Función para ocultar el popup y hacer que reaparezca en 10 segundos
     function ocultarPopup() {
         anuncio.classList.remove('mostrar');
