@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const anuncio = document.getElementById('anuncio');
 
 
-  /*  // Función para mostrar el popup
+    // Función para mostrar el popup
     function mostrarPopup() {
         anuncio.classList.add('mostrar');
-    }*/
+    }
+
     // Función para ocultar el popup y hacer que reaparezca en 10 segundos
     function ocultarPopup() {
         anuncio.classList.remove('mostrar');
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Mostrar el popup tras una pequeña demora inicial
-    setTimeout(mostrarPopup);
+   /* setTimeout(mostrarPopup);*/
 
     // Cerrar el popup al hacer clic en la "X"
     const closeBtn = anuncio.querySelector('.close-btn');
