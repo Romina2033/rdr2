@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Mostrar el popup tras una pequeña demora inicial
-    setTimeout(mostrarPopup, 5000);
+    setTimeout(mostrarPopup);
 
     // Cerrar el popup al hacer clic en la "X"
     const closeBtn = anuncio.querySelector('.close-btn');
