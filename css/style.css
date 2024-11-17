@@ -1635,3 +1635,14 @@ strong {
         font-size: 1.2em; /* Ajustar aún más el tamaño */
     }
 }
+
+
+.ayuda  {
+text-align: center;
+background-color: #e0d9d9;
+border-color: #b6adad;
+border-radius: 10px;
+margin: 100px;
+
+}
+
