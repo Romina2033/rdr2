@@ -2,7 +2,7 @@
 window.onload = function() {
     setTimeout(function() {
         document.getElementById('popup').style.display = 'block';
-    }, 2000); // Muestra el popup después de 2 segundos
+    }, 2000); 
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (likeButton) {
         likeButton.addEventListener('click', function(event) {
-            // Crear múltiples corazones pequeños
+
             for (var i = 0; i < 10; i++) {
                 var heart = document.createElement('div');
                 heart.classList.add('heart');
@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 heart.style.top = (event.clientY + Math.random() * 20 - 10) + 'px';
                 document.body.appendChild(heart);
 
-                // Eliminar el corazón después de la animación
+
                 setTimeout(function(el) {
                     el.remove();
                 }, 2000, heart);
             }
 
-            // Aplicar animación al corazón principal
+
             this.classList.toggle('liked');
         });
     }
