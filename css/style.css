@@ -1356,6 +1356,7 @@ footer {
 }
 
 h5 {
+    text-align: center;
     display: block;
     font-size: 2em;
     margin-block-start: 1.67em;
@@ -1364,6 +1365,7 @@ h5 {
     margin-inline-end: 0px;
     font-weight: bold;
     unicode-bidi: isolate;
+
 }
 
 
