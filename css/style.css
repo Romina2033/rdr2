@@ -807,7 +807,6 @@ footer {
     width: 100%;
 }
 
-
 .gallery-carousel {
     display: none; 
     position: fixed;
@@ -870,7 +869,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr); 
@@ -893,9 +891,6 @@ footer {
     display: block;
 }
 
-
-
-
 #personajes h1 {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -912,7 +907,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 #personajes {
     padding: 20px;
@@ -961,7 +955,6 @@ footer {
     text-align: justify;
 }
 
-
 @media (max-width: 768px) {
     #personajes .info-personaje {
         flex-direction: column;
@@ -971,6 +964,18 @@ footer {
     #personajes .info-personaje img {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    /* Cambiar la disposición de las imágenes en la galería a 4 por fila */
+    .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Cambiar la disposición de las imágenes en la galería a 2 por fila en pantallas más pequeñas */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
     }
 }
 
