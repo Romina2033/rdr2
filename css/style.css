@@ -1252,6 +1252,28 @@ footer {
     }
     
 
+.ver-mas {
+    background-color: #763333; 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+
+.ver-mas:hover {
+    background-color: #763333;
+    transform: scale(1.05); 
+}
+
+
+.ver-mas:active {
+    transform: scale(0.98); 
+}
+
 
 #anuncio {
     border-style: dashed;
