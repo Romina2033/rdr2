@@ -36,10 +36,8 @@ nav {
 }
 
 
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+.menu-icon, .menu-close {
+    display: none; 
 }
 
 .menu {
@@ -48,47 +46,63 @@ nav {
     padding: 0;
     display: flex;
     transition: transform 0.3s ease-in-out;
+    background: linear-gradient(135deg, #bd3b3b, #862525);
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    width: 100%;
 }
 
 .menu li {
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 18px;
 }
 
 .menu a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px 15px; 
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.menu a:hover {
+    background-color: #eabb4d; 
+    color: #862525; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: none; 
+}
 
 .menu a.active {
-    background-color: #862525; 
-    border: 2px solid #eabb4d; 
-    border-style:ridge;
-    border-radius: 5px; 
-    padding: 5px 10px; 
+    background-color: #eabb4d;
+    border-color: #de8116;
+    border-style: dotted;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 976px) { 
     .menu {
         display: none;
         flex-direction: column;
-        width: 75%;
-        max-width: 300px;
+        width: 50%; 
         height: 100vh;
         overflow-y: auto;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #bd3b3b;
+        background-color: rgba(189, 59, 59, 0.9); 
         z-index: 1000;
         padding: 20px;
+        border-radius: 0; 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
     }
 
     .menu li {
         margin: 30px 0;
         text-align: left;
+        font-size: 22px;
     }
 
     .menu-icon {
@@ -96,9 +110,10 @@ nav {
         position: fixed;
         top: 20px;
         left: 20px;
+        font-size: 30px;
         z-index: 1001;
+        color: white; 
     }
-
 
     .menu-close {
         display: none;
@@ -111,9 +126,9 @@ nav {
         z-index: 1002;
     }
 
-
     body.menu-open .menu {
         display: flex;
+        transform: translateX(0);
     }
 
     body.menu-open .menu-icon {
@@ -128,6 +143,7 @@ nav {
         overflow: hidden;
     }
 }
+
 
 
 
@@ -588,13 +604,35 @@ h1 {
 }
 
 .img5 {
-    width: auto; 
+    width: auto;
     max-width: 100%;
-    height: 400px; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    margin-bottom: 10px; 
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
+
+
+@media (max-width: 768px) {
+    .img5 {
+        height: 250px; 
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .img5 {
+        height: 300px; 
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .img5 {
+        height: 400px; 
+    }
+}
+
 
 .noticia {
     background-color: white;
