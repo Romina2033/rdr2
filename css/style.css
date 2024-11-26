@@ -966,16 +966,16 @@ footer {
         margin-bottom: 10px;
     }
 
-    /* Cambiar la disposición de las imágenes en la galería a 4 por fila */
+
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
-    /* Cambiar la disposición de las imágenes en la galería a 2 por fila en pantallas más pequeñas */
+
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas por fila */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 

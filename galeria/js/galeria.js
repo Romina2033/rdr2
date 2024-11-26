@@ -72,7 +72,7 @@ function toggleMenu() {
 }
 
 
-/* menu */ 
+
 
 const menuIcon = document.querySelector('.menu-icon');
 const menu = document.querySelector('.menu');

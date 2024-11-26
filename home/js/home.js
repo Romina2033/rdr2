@@ -11,7 +11,7 @@ closeMenu.addEventListener('click', () => {
 });
 
 
-// Carrusel
+
 let currentSlide = 0;
 
 function showSlide(index) {
