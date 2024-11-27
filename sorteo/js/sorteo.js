@@ -6,9 +6,23 @@ menuIcon.addEventListener('click', () => {
     document.body.classList.add('menu-open');
 });
 
-closeMenu.addEventListener('click', () => {
-    document.body.classList.remove('menu-open');
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const checkboxes = document.querySelectorAll('input[name="actualizaciones"]');
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            checkboxes.forEach(otherCheckbox => {
+                if (otherCheckbox !== checkbox) {
+                    otherCheckbox.checked = false;  
+                }
+            });
+        });
+    });
+
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {

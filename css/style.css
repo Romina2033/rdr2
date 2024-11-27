@@ -335,6 +335,45 @@ body.dark-theme #login {
     background-color: #7cadb6; 
 }
 
+.form-group {
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-group > div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.form-group > div label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #000000;
+    gap: 10px;
+}
+
+.form-group > div label input[type="radio"] {
+    margin: 0;
+    transform: scale(1.5); 
+}
+
+@media (max-width: 576px) {
+    .form-group > div {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group > div label {
+        font-size: 14px;
+    }
+}
+
+
+
 #register {
     background: linear-gradient(135deg, rgba(117, 24, 24, 0.9) 0%, rgba(220, 140, 140, 0.9) 100%),
                 url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); 
@@ -1648,6 +1687,16 @@ input, select {
     color: #27ae60; 
 }
 
+.form-check-label{
+text-align: center;
+}
+
+.checkboxSorteo{
+display: flex;
+justify-content: center;
+
+
+}
 
 @media (max-width: 576px) {
     .sorteo {

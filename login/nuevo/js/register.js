@@ -6,63 +6,60 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const fechaNacimiento = document.getElementById('fecha-nacimiento').value;
     const genero = document.getElementById('genero').value;
     const generoOtro = document.getElementById('generoOtro');
-    const pronombres = document.getElementById('pronombres').value;
+    const pronombres = document.querySelector('input[name="pronombres"]:checked');
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     const errorMessage = document.getElementById('errorMessage');
 
-    // Limpiar mensajes previos
     errorMessage.textContent = '';
 
-    // Validar que las contraseñas coincidan
+    if (!pronombres) {
+        errorMessage.textContent = 'Por favor selecciona tus pronombres.';
+        return;
+    }
+
     if (password !== confirmPassword) {
         errorMessage.textContent = 'Las contraseñas no coinciden.';
         return;
     }
 
-    // Calcular la edad a partir de la fecha de nacimiento
     const today = new Date();
     const birthDate = new Date(fechaNacimiento);
     let edad = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
 
-    // Ajustar la edad si el cumpleaños aún no ha ocurrido en el año actual
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
         edad--;
     }
 
-    // Validar si el usuario es mayor de edad (18 años)
     if (edad < 18) {
         errorMessage.textContent = 'Debes ser mayor de edad para registrarte.';
         return;
     }
 
-    // Validar si el nombre de usuario ya existe
     const existingUser = localStorage.getItem('user_' + username);
     if (existingUser) {
         errorMessage.textContent = 'El nombre de usuario ya está registrado.';
         return;
     }
 
-    // Guardar el nuevo usuario en localStorage
     const newUser = {
         username: username,
         email: email,
         edad: edad,
-        genero: genero === 'otro' ? generoOtro.value : genero, // Usar el valor "Otro" si se especifica
-        pronombres: pronombres,
+        genero: genero === 'otro' ? generoOtro.value : genero,
+        pronombres: pronombres.value,
         password: password
     };
 
     localStorage.setItem('user_' + username, JSON.stringify(newUser));
 
-    // Registro exitoso
     alert('Cuenta creada exitosamente. Ahora puedes iniciar sesión.');
-    window.location.href = '../../../index.html'; // Redirigir al login después de registrarse
+    window.location.href = '../../../index.html';
 });
 
 
-// Función para mostrar/ocultar el campo "Otro" en género
+
 function toggleGeneroOtro() {
     const genero = document.getElementById('genero').value;
     const generoOtro = document.getElementById('generoOtro');

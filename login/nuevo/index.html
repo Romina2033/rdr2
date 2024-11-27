@@ -37,14 +37,20 @@
                     <input type="text" id="generoOtro" name="generoOtro" class="form-control mt-2" placeholder="Especifica si elegiste 'Otro' (opcional)" style="display: none;">
                 </div>
                 <div class="form-group">
-                    <label for="pronombres">Pronombres:</label>
-                    <select id="pronombres" name="pronombres" class="form-control" required>
-                        <option value="">Seleccione pronombres</option>
-                        <option value="ella">Ella</option>
-                        <option value="el">Él</option>
-                        <option value="elle">Elle</option>
-                    </select>
+                    <label>Pronombres:</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="pronombres" value="ella" required> Ella
+                        </label>
+                        <label>
+                            <input type="radio" name="pronombres" value="el" required> Él
+                        </label>
+                        <label>
+                            <input type="radio" name="pronombres" value="elle" required> Elle
+                        </label>
+                    </div>
                 </div>
+                
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" class="form-control" id="password" name="password" required autocomplete="new-password">

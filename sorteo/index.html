@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorteo RDR2</title>
+    <title>Sorteo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -60,12 +60,21 @@
                         <option value="España">España</option>
                     </select>
                 </div>
+                <div class="form-groupA">
+                    <label>¿Desea recibir más información sobre las actualizaciones?</label>
+                    <div class="checkboxSorteo">
+                        <label class="form-check-label">
+                            Sí  <input type="checkbox" name="actualizaciones" value="si" required> 
+                        </label>
+                        <label class="form-check-label">
+                            No <input type="checkbox" name="actualizaciones" value="no" required> 
+                        </label>
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </section>
     </main>
     <script src="../sorteo/js/sorteo.js"></script>
-
-
 </body>
 </html>
