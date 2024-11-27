@@ -17,7 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         if (user.password === password) {
             alert('¡BIENVENIDXS!');
             localStorage.setItem('isLoggedIn', 'true');
-            window.location.href = '../home/home.html'; 
+            window.location.href = '../home/index.html'; 
         } else {
             errorMessage.textContent = 'Error, contraseña incorrecta.';
         }
