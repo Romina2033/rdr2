@@ -1828,17 +1828,17 @@ margin: 100px;
     }
 }
 
-
-/* Estilos del juego */
 .minijuego {
-    background-color: rgba(255, 255, 255, 0.767) ;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.767);
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .minijuego h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #000000;
     font-weight: bold;
 }
@@ -1848,11 +1848,11 @@ margin: 100px;
 }
 
 #instructions {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #game-board {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #card-show img, #card-hidden img {
@@ -1862,8 +1862,8 @@ margin: 100px;
 }
 
 #buttons .btn {
-    padding: 10px 20px;
-    font-size: 1.125rem;
+    padding: 8px 15px;
+    font-size: 1rem;
 }
 
 #result span, #points {
@@ -1876,14 +1876,21 @@ margin: 100px;
 }
 
 #joker .btn {
-    font-size: 1.125rem;
+    padding: 8px 15px;
+    font-size: 1rem;
+    width: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+#joker .btn:hover {
+    color:white; 
 }
 
 #hint {
     margin-top: 20px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -1917,11 +1924,15 @@ margin: 100px;
     }
 
     #game-board {
-        flex-direction: column;
+        display: flex; 
+        justify-content: center; 
+        gap: 20px; 
     }
 
     #card-show, #card-hidden {
-        margin-bottom: 15px;
+        flex: 1; 
+        max-width: 45%; 
+        margin-bottom: 0; 
     }
 
     #buttons .btn {
