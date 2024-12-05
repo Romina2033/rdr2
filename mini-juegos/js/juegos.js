@@ -18,12 +18,14 @@ let hintUsed = false;
 function generateCards() {
   currentCard = Math.floor(Math.random() * 10) + 1;
   hiddenCard = Math.floor(Math.random() * 10) + 1;
-  
-  // Actualiza las imágenes de las cartas
+
   document.getElementById('visible-card-img').src = `./img/${currentCard}.png`;
   document.getElementById('hidden-card-img').src = './img/atras.png';
   
   document.getElementById('result-message').textContent = '';
+  document.getElementById('hint').style.display = 'none';
+  hintUsed = false;
+  document.getElementById('buy-joker').disabled = false;
 }
 
 function checkAnswer(answer) {
@@ -50,8 +52,6 @@ function checkAnswer(answer) {
     }
 
     pointsDisplay.textContent = points;
-    
-    // Muestra la carta oculta
     hiddenCardDisplay.src = `./img/${hiddenCard}.png`;
   }
 
@@ -63,9 +63,10 @@ function buyJoker() {
     points -= 10;
     document.getElementById('points').textContent = points;
     hintUsed = true;
-    let hintMessage = getHint();
+    let hintMessage = getHint(currentCard);
     document.getElementById('hint-text').textContent = hintMessage;
     document.getElementById('hint').style.display = 'block';
+    document.getElementById('buy-joker').disabled = true;
   } else if (hintUsed) {
     alert("Ya has usado la carta comodín.");
   } else {
@@ -82,6 +83,5 @@ function getHint(shownCard) {
     return "La carta oculta guarda un poder mayor al de la que muestras al mundo.";
   }
 }
-
 
 generateCards();
