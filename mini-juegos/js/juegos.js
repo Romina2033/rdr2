@@ -73,14 +73,15 @@ function buyJoker() {
   }
 }
 
-function getHint() {
-  if (hiddenCard < 5) {
-    return "Es menor a la mitad de 10.";
-  } else if (hiddenCard === 5) {
-    return "Es igual a la mitad de 10.";
-  } else {
-    return "Es mayor a la mitad de 10.";
+function getHint(shownCard) {
+  if (hiddenCard < shownCard) {
+    return "La carta que se esconde es más pequeña que la que se revela al ojo.";
+  } else if (hiddenCard === shownCard) {
+    return "Ambas cartas susurran lo mismo, son iguales en su esencia.";
+  } else if (hiddenCard > shownCard) {
+    return "La carta oculta guarda un poder mayor al de la que muestras al mundo.";
   }
 }
+
 
 generateCards();

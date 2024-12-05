@@ -1834,7 +1834,7 @@ margin: 100px;
 
 .minijuego {
     background-color: rgba(255, 255, 255, 0.767);
-    padding: 20px; 
+    padding: 60px; 
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 800px;
@@ -1922,5 +1922,36 @@ margin: 100px;
 
     #hint {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .minijuego {
+        padding: 20px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .minijuego h1 {
+        font-size: 1.5rem;
+    }
+
+    .minijuego h2, .minijuego h3 {
+        font-size: 1rem;
+    }
+
+    #instructions, #game-board, #hint {
+        font-size: 0.9rem;
+    }
+
+    #buttons .btn, #joker .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    #card-show img, #card-hidden img {
+        max-width: 90%;
+        height: auto;
+        margin: 0 auto;
     }
 }
