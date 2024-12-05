@@ -1874,7 +1874,7 @@ margin: 100px;
 
 #result span, #points {
     font-weight: bold;
-    color: #801e11;
+    color: #952212;
 }
 
 #joker {
@@ -1955,5 +1955,169 @@ margin: 100px;
         max-width: 90%;
         height: auto;
         margin: 0 auto;
+    }
+}
+
+.seccion {
+    background-color: #ffffffc1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.texto.alumna {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-success {
+    background-color: #801e11;
+    border-color: #e6d26e;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    width: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-success:hover {
+    background-color: #6a150a;
+    border-color: #c1a149;
+    transform: scale(1.05);
+}
+
+.btn-success:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(164, 28, 25, 0.685);
+}
+
+
+#student-container {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); 
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.card {
+    background-color: #ffffffca;
+    border-radius: 12px;
+    padding: 30px;
+    height: auto;  
+
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#student-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #6a150a;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#student-image:hover {
+    transform: scale(1.1);
+}
+
+.alumna-titulo {
+    color: #45140e;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#student-container h3 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+#student-container p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: left ;
+}
+
+#back-btn {
+    background-color: #6a150a;
+    border-color: #e6d26e;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    width: auto;
+    transition: background-color 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+#back-btn:hover {
+    background-color: #6a150a;
+    border-color: #c1a149;
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .card {
+
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #student-container h1 {
+        font-size: 2rem;
+    }
+
+    #student-container h3 {
+        font-size: 1rem;
+    }
+
+    #student-container p {
+        font-size: 0.9rem;
+    }
+
+    #back-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    #student-container {
+        padding: 20px;
+    }
+
+    #student-container h1 {
+        font-size: 1.5rem;
+    }
+
+    #student-container h3 {
+        font-size: 1rem;
+    }
+
+    #student-container p {
+        font-size: 0.9rem;
+    }
+
+    #back-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
     }
 }
