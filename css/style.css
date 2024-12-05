@@ -1898,36 +1898,6 @@ margin: 100px;
 }
 
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #000000;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 20px;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .menu-close {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
-
-    .menu a {
-        color: #fff;
-    }
 
     #game-board {
         display: flex; 
