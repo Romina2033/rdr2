@@ -22,8 +22,8 @@ function generateCards() {
   currentCard = Math.floor(Math.random() * 10) + 1;
   hiddenCard = Math.floor(Math.random() * 10) + 1;
 
-  document.getElementById('visible-card-img').src = `./img/${currentCard}.png`;
-  document.getElementById('hidden-card-img').src = './img/atras.png';
+  document.getElementById('visible-card-img').src = `./img/${currentCard}.jpg`;
+  document.getElementById('hidden-card-img').src = './img/atras.jpg';
   document.getElementById('result-message').textContent = '';
   document.getElementById('hint').style.display = 'none';
   document.getElementById('buy-joker').disabled = false;
@@ -87,7 +87,7 @@ function checkAnswer(answer) {
 }
 
 function revealHiddenCard() {
-  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.png`;
+  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.jpg`;
 }
 
 function updatePointsDisplay() {
@@ -96,7 +96,7 @@ function updatePointsDisplay() {
 
 
 function revealHiddenCard() {
-  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.png`;
+  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.jpg`;
 }
 function buyJoker() {
   const jokerCost = hintUsed ? 20 : 10; 
