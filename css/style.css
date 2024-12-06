@@ -52,17 +52,19 @@ nav {
     width: 100%;
 }
 
+/* Estilo de las secciones dentro del menú */
 .menu li {
-    margin: 0 15px;
+    margin: 0 10px;
     font-size: 18px;
     text-align: center;
 }
 
+/* Estilo de los enlaces del menú */
 .menu a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px; 
+    padding: 8px 12px;
     display: block;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -83,27 +85,28 @@ nav {
     padding: 5px 10px;
 }
 
+/* Menú hamburguesa en dispositivos pequeños */
 @media (max-width: 1000px) { 
     .menu {
         display: none;
         flex-direction: column;
-        width: 50%; 
-        height: 100vh;
+        width: 100%;
+        height: 50vh; /* La mitad de la altura de la pantalla */
         overflow-y: auto;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(189, 59, 59, 0.9); 
+        background-color: rgba(189, 59, 59, 0.95);
         z-index: 1000;
         padding: 20px;
-        border-radius: 0; 
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        border-radius: 0;
     }
 
     .menu li {
-        margin: 30px 0;
+        margin: 15px 0;
         text-align: left;
-        font-size: clamp(18px, 3vw, 22px);
+        font-size: clamp(16px, 3vw, 20px);
     }
 
     .menu-icon {
@@ -145,9 +148,7 @@ nav {
     }
 }
 
-
-
-
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -159,6 +160,78 @@ nav {
     width: auto;
 }
 
+/* Menú hamburguesa en dispositivos pequeños */
+@media (max-width: 1000px) { 
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 50%; /* Solo la mitad del lado izquierdo */
+        height: 100vh;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(189, 59, 59, 0.95);
+        z-index: 1000;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        border-radius: 0;
+    }
+
+    .menu li {
+        font-size: clamp(16px, 3vw, 20px);
+    }
+
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        font-size: 30px;
+        z-index: 1001;
+        color: white; 
+    }
+
+    .menu-close {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    body.menu-open .menu {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    body.menu-open .menu-icon {
+        display: none;
+    }
+
+    body.menu-open .menu-close {
+        display: block;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; 
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
 
 @media (max-width: 1000px) {
     .logo {
@@ -172,12 +245,9 @@ nav {
     }
 
     .menu li {
-        margin: 20px 0;
-        text-align: left;
         font-size: clamp(14px, 4vw, 18px);
     }
 }
-
 
 
 

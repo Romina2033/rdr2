@@ -14,6 +14,9 @@ let points = 0;
 let currentCard = 0;
 let hiddenCard = 0;
 let hintUsed = false;
+let errorCount = 0;
+let timeLimit = 10; 
+let timer;
 
 function generateCards() {
   currentCard = Math.floor(Math.random() * 10) + 1;
@@ -21,14 +24,37 @@ function generateCards() {
 
   document.getElementById('visible-card-img').src = `./img/${currentCard}.png`;
   document.getElementById('hidden-card-img').src = './img/atras.png';
-  
   document.getElementById('result-message').textContent = '';
   document.getElementById('hint').style.display = 'none';
-  hintUsed = false;
   document.getElementById('buy-joker').disabled = false;
+
+  hintUsed = false;
+  startTimer();
+}
+
+function startTimer() {
+  clearTimeout(timer);
+  let timeLeft = timeLimit;
+  const timerDisplay = document.getElementById('result-message');
+  
+  const countdown = () => {
+    if (timeLeft > 0) {
+      timerDisplay.textContent = `Tiempo restante: ${timeLeft} segundos`;
+      timeLeft--;
+      timer = setTimeout(countdown, 1000);
+    } else {
+      timerDisplay.textContent = "¡Se acabó el tiempo!";
+      points -= 5; 
+      updatePointsDisplay();
+      setTimeout(generateCards, 1000);
+    }
+  };
+  countdown();
 }
 
 function checkAnswer(answer) {
+  clearTimeout(timer); 
+
   let isCorrect = false;
   if (answer === 'less' && hiddenCard < currentCard) {
     isCorrect = true;
@@ -39,38 +65,58 @@ function checkAnswer(answer) {
   }
 
   const resultMessage = document.getElementById('result-message');
-  const pointsDisplay = document.getElementById('points');
-  const hiddenCardDisplay = document.getElementById('hidden-card-img');
 
-  if (resultMessage && pointsDisplay && hiddenCardDisplay) {
-    if (isCorrect) {
-      points += 5;
-      resultMessage.textContent = '¡Correcto!';
-    } else {
-      points -= 2;
-      resultMessage.textContent = '¡Incorrecto!';
+  if (isCorrect) {
+    points += 5;
+    resultMessage.textContent = '¡Correcto!';
+    errorCount = 0;
+  } else {
+    points -= 2;
+    errorCount++;
+    resultMessage.textContent = '¡Incorrecto!';
+
+    if (errorCount >= 3) {
+      points -= 5;
+      resultMessage.textContent += ' Penalización por errores consecutivos.';
+      errorCount = 0; 
     }
-
-    pointsDisplay.textContent = points;
-    hiddenCardDisplay.src = `./img/${hiddenCard}.png`;
   }
 
+  updatePointsDisplay();
+  revealHiddenCard();
   setTimeout(generateCards, 1000);
 }
 
+function updatePointsDisplay() {
+  document.getElementById('points').textContent = points;
+
+
+  if (points > 0 && points % 20 === 0) {
+    timeLimit = Math.max(5, timeLimit - 1); 
+  }
+}
+
+function revealHiddenCard() {
+  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.png`;
+}
 function buyJoker() {
-  if (points >= 10 && !hintUsed) {
-    points -= 10;
-    document.getElementById('points').textContent = points;
+  const jokerCost = hintUsed ? 20 : 10; 
+  if (points >= jokerCost && !hintUsed) {
+    points -= jokerCost; 
+    document.getElementById('points').textContent = points; 
     hintUsed = true;
+
+
     let hintMessage = getHint(currentCard);
     document.getElementById('hint-text').textContent = hintMessage;
+
+
     document.getElementById('hint').style.display = 'block';
     document.getElementById('buy-joker').disabled = true;
   } else if (hintUsed) {
-    alert("Ya has usado la carta comodín.");
+    alert("Ya has usado la carta comodín. El siguiente uso cuesta más puntos.");
   } else {
-    alert("No tienes suficientes puntos.");
+    alert("No tienes suficientes puntos para comprar el comodín.");
   }
 }
 
@@ -85,3 +131,4 @@ function getHint(shownCard) {
 }
 
 generateCards();
+
