@@ -52,14 +52,13 @@ nav {
     width: 100%;
 }
 
-/* Estilo de las secciones dentro del menú */
 .menu li {
     margin: 0 10px;
     font-size: 18px;
     text-align: center;
 }
 
-/* Estilo de los enlaces del menú */
+
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -85,13 +84,13 @@ nav {
     padding: 5px 10px;
 }
 
-/* Menú hamburguesa en dispositivos pequeños */
+
 @media (max-width: 1000px) { 
     .menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        height: 50vh; /* La mitad de la altura de la pantalla */
+        height: 50vh;
         overflow-y: auto;
         position: fixed;
         top: 0;
@@ -160,12 +159,12 @@ nav {
     width: auto;
 }
 
-/* Menú hamburguesa en dispositivos pequeños */
+
 @media (max-width: 1000px) { 
     .menu {
         display: none;
         flex-direction: column;
-        width: 50%; /* Solo la mitad del lado izquierdo */
+        width: 50%; 
         height: 100vh;
         overflow-y: auto;
         position: fixed;
@@ -221,7 +220,7 @@ nav {
     }
 }
 
-/* Logo */
+
 .logo {
     display: flex;
     align-items: center;
