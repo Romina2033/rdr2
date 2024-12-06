@@ -69,7 +69,7 @@ function checkAnswer(answer) {
   if (isCorrect) {
     points += 5;
     resultMessage.textContent = '¡Correcto!';
-    errorCount = 0;
+    errorCount = 0; 
   } else {
     points -= 2;
     errorCount++;
@@ -84,8 +84,9 @@ function checkAnswer(answer) {
 
   updatePointsDisplay();
   revealHiddenCard();
-  setTimeout(generateCards, 1000);
+  setTimeout(generateCards, 1000); 
 }
+
 
 function updatePointsDisplay() {
   document.getElementById('points').textContent = points;
