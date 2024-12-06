@@ -43,10 +43,9 @@ function startTimer() {
       timeLeft--;
       timer = setTimeout(countdown, 1000);
     } else {
-      timerDisplay.textContent = "¡Se acabó el tiempo!";
-      points -= 5; 
-      updatePointsDisplay();
-      setTimeout(generateCards, 1000);
+      timerDisplay.textContent = "¡Se acabó el tiempo!"; 
+      revealHiddenCard(); 
+      setTimeout(generateCards, 1000); 
     }
   };
   countdown();
@@ -69,7 +68,7 @@ function checkAnswer(answer) {
   if (isCorrect) {
     points += 5;
     resultMessage.textContent = '¡Correcto!';
-    errorCount = 0; 
+    errorCount = 0;
   } else {
     points -= 2;
     errorCount++;
@@ -84,18 +83,17 @@ function checkAnswer(answer) {
 
   updatePointsDisplay();
   revealHiddenCard();
-  setTimeout(generateCards, 1000); 
+  setTimeout(generateCards, 1000);
 }
 
+function revealHiddenCard() {
+  document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.png`;
+}
 
 function updatePointsDisplay() {
   document.getElementById('points').textContent = points;
-
-
-  if (points > 0 && points % 20 === 0) {
-    timeLimit = Math.max(5, timeLimit - 1); 
-  }
 }
+
 
 function revealHiddenCard() {
   document.getElementById('hidden-card-img').src = `./img/${hiddenCard}.png`;
